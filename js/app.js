@@ -53,20 +53,35 @@ const studenti = [
 console.log(studenti);
 
 //ciclare tutti gli studenti e stampare nome e cognome
-for (let i = 0; i < studenti.length; i++){
+// for (let i = 0; i < studenti.length; i++){
 
-    let studente = studenti[i]
-    // console.log(i, studente);
+//     let studente = studenti[i]
+//     // console.log(i, studente);
 
+//     //--costante nome
+//     const name = studente.nome
+//      //--costante cognome
+//     const surname = studente.cognome  
+    
+//     //stampare nome e cognome
+//     console.log(`${name} ${surname}`)        
+
+// };
+
+studenti.forEach(function(studente,i){
     //--costante nome
     const name = studente.nome
-     //--costante cognome
-    const surname = studente.cognome  
-    
-    //stampare nome e cognome
-    console.log(`${name} ${surname}`)        
+    //--costante cognome
+   const surname = studente.cognome  
+   
+   //stampare nome e cognome
+   console.log(`${name} ${surname}`)  
+});
 
-};
+//perché nel ciclo for ho dovuto dare un valore alla variabile i (let studente = studenti[i]),
+//mentre nel forEach non serve? Perché avendolo indicato nel paramentro è già di suo il singolo
+//elemento dell'array?
+
 
 
 
