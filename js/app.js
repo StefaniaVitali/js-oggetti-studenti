@@ -53,5 +53,23 @@ const studenti = [
 console.log(studenti);
 
 //ciclare tutti gli studenti e stampare nome e cognome
+for (let i = 0; i < studenti.length; i++){
+
+    let studente = studenti[i]
+    // console.log(i, studente);
+
+    //--costante nome
+    const name = studente.nome
+     //--costante cognome
+    const surname = studente.cognome  
+    
+    //stampare nome e cognome
+    console.log(`${name} ${surname}`)        
+
+};
+
+
+
+
 
 
