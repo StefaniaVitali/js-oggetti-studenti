@@ -14,3 +14,44 @@ Ciclare su tutti gli studenti e stampare per ognuno di essi tutte le proprietà 
 prima ciclate con un ciclo for
 poi commentate il ciclo for e usate il forEach
  */
+
+
+//creare un array di oggetti di studenti   
+//--ogni studente deve avere nome, cognome ed eta
+//   const studente = {nome: '', cognome: '', eta: '' };
+
+const studenti = [
+    {
+        nome: 'Mario',
+        cognome: 'Lanza',
+        eta: '34'
+    },
+    {
+        nome: 'Stefania',
+        cognome: 'Satta',
+        eta: '23'
+    },
+    {
+        nome: 'Luciano',
+        cognome: 'Bertolli',
+        eta: '56'
+    },
+    {
+        nome: 'Carlo',
+        cognome: 'Scano',
+        eta: '21'
+    },
+    {
+        nome: 'Ilaria',
+        cognome: 'Savoldi',
+        eta: '33'
+    },
+    
+
+];
+
+console.log(studenti);
+
+//ciclare tutti gli studenti e stampare nome e cognome
+
+
