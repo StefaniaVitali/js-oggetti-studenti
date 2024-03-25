@@ -96,27 +96,25 @@ poi commentate il ciclo for e usate il forEach */
 //creare oggetto studente vuoto => provare in maniera dinamica
 const nuovoStudente = {};
 
-///////////////da qui
-//chiedere tramite prompt nome
-// let   propName = 'nome'
-// const valueName = prompt('Inserisci il nome'); //string | Null
 
-// //chiedere tramite prompt cognome
-// let propSurname = 'cognome'
-// const valueSurname = prompt('Inserisci il cognome');//string | Null
+// chiedere tramite prompt nome
+let   propName = 'nome'
+const valueName = prompt('Inserisci il nome'); //string | Null
 
-// //chiedere tramite prompt età e trasformare stringa in numero
-// let propEta = 'eta'
-// const valueEta = parseInt(prompt('Inserisci la tua età'));
+//chiedere tramite prompt cognome
+let propSurname = 'cognome'
+const valueSurname = prompt('Inserisci il cognome');//string | Null
+
+//chiedere tramite prompt età e trasformare stringa in numero
+let propEta = 'eta'
+const valueEta = parseInt(prompt('Inserisci la tua età'));
 
 
 
 // creare le proprietà da inserire nell'oggetto studente
-// nuovoStudente[propName] = valueName;
-// nuovoStudente[propSurname] = valueSurname;
-// nuovoStudente[propEta] = valueEta;
-
-///////////////a qui
+nuovoStudente[propName] = valueName;
+nuovoStudente[propSurname] = valueSurname;
+nuovoStudente[propEta] = valueEta;
 
 console.log(nuovoStudente)
 
@@ -136,39 +134,65 @@ studenti.forEach(function (studente, i) {
 });
 
 
-//solo il mio 
-
-
-
 //provare a prendere i valori da un input
 const inputNome = document.getElementById('nome');
 const inputCognome = document.getElementById('cognome');
 const inputEta = document.getElementById('età');
 const buttonElement = document.getElementById('invio');
+const formElement = document.getElementById('new-student-form');
 
 console.log(inputNome, inputCognome, inputEta, buttonElement)
 
 
 
 
+//PROVARE SENZA IL TAG FORM
+// buttonElement.addEventListener('click', function () {
+//     //chiedere tramite prompt nome
+//     let propName = 'nome'
+//     const valueName2 = inputNome.value //string | Null
 
-buttonElement.addEventListener('click', function () {
-    //chiedere tramite prompt nome
+
+//     // //chiedere tramite prompt cognome
+//     let propSurname = 'cognome'
+//     const valueSurname2 = inputCognome.value //string | Null
+
+//     // //chiedere tramite prompt età e trasformare stringa in numero
+//     let propEta = 'eta'
+//     const valueEta2 = parseInt(inputEta.value);//number
+
+//     // console.log(valueName2, valueSurname2, valueEta2);
+
+//     // creare le proprietà da inserire nell'oggetto studente
+//     nuovoStudente[propName] = valueName2;
+//     nuovoStudente[propSurname] = valueSurname2;
+//     nuovoStudente[propEta] = valueEta2;
+
+//     console.log(nuovoStudente)
+
+//     studenti.push(nuovoStudente);
+//     // console.log(studenti);
+
+//     studenti.forEach(function (studente, i) {
+//     console.log(`${studente.nome} ${studente.cognome} ${studente.eta}`)
+//     });
+// });
+
+//PROVARE CON IL TAG FORM
+formElement.addEventListener('submit', function(event){
+    event.preventDefault()
+
     let propName = 'nome'
     const valueName2 = inputNome.value //string | Null
 
-
-    // //chiedere tramite prompt cognome
     let propSurname = 'cognome'
     const valueSurname2 = inputCognome.value //string | Null
 
-    // //chiedere tramite prompt età e trasformare stringa in numero
     let propEta = 'eta'
     const valueEta2 = parseInt(inputEta.value);//number
 
     // console.log(valueName2, valueSurname2, valueEta2);
 
-    // creare le proprietà da inserire nell'oggetto studente
     nuovoStudente[propName] = valueName2;
     nuovoStudente[propSurname] = valueSurname2;
     nuovoStudente[propEta] = valueEta2;
@@ -181,5 +205,8 @@ buttonElement.addEventListener('click', function () {
     studenti.forEach(function (studente, i) {
     console.log(`${studente.nome} ${studente.cognome} ${studente.eta}`)
     });
-});
+
+})
+
+
 
