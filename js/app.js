@@ -109,17 +109,19 @@ const nuovoStudente = {};
 // let propEta = 'eta'
 // const valueEta = parseInt(prompt('Inserisci la tua età'));
 
-///////////////a qui
 
-//creare le proprietà da inserire nell'oggetto studente
-nuovoStudente[propName] = valueName;
-nuovoStudente[propSurname] = valueSurname;
-nuovoStudente[propEta] = valueEta;
+
+// creare le proprietà da inserire nell'oggetto studente
+// nuovoStudente[propName] = valueName;
+// nuovoStudente[propSurname] = valueSurname;
+// nuovoStudente[propEta] = valueEta;
+
+///////////////a qui
 
 console.log(nuovoStudente)
 
 studenti.push(nuovoStudente);
-console.log(studenti);
+// console.log(studenti);
 
 //per ogni oggetto studente dell'array ciclare e ottenere nome cognome ed età
 // for (let i = 0; i<studenti.length; i++){
@@ -138,4 +140,46 @@ studenti.forEach(function (studente, i) {
 
 
 
+//provare a prendere i valori da un input
+const inputNome = document.getElementById('nome');
+const inputCognome = document.getElementById('cognome');
+const inputEta = document.getElementById('età');
+const buttonElement = document.getElementById('invio');
+
+console.log(inputNome, inputCognome, inputEta, buttonElement)
+
+
+
+
+
+buttonElement.addEventListener('click', function () {
+    //chiedere tramite prompt nome
+    let propName = 'nome'
+    const valueName2 = inputNome.value //string | Null
+
+
+    // //chiedere tramite prompt cognome
+    let propSurname = 'cognome'
+    const valueSurname2 = inputCognome.value //string | Null
+
+    // //chiedere tramite prompt età e trasformare stringa in numero
+    let propEta = 'eta'
+    const valueEta2 = parseInt(inputEta.value);//number
+
+    // console.log(valueName2, valueSurname2, valueEta2);
+
+    // creare le proprietà da inserire nell'oggetto studente
+    nuovoStudente[propName] = valueName2;
+    nuovoStudente[propSurname] = valueSurname2;
+    nuovoStudente[propEta] = valueEta2;
+
+    console.log(nuovoStudente)
+
+    studenti.push(nuovoStudente);
+    // console.log(studenti);
+
+    studenti.forEach(function (studente, i) {
+    console.log(`${studente.nome} ${studente.cognome} ${studente.eta}`)
+    });
+});
 
