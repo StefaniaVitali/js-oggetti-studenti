@@ -73,10 +73,6 @@ studenti.forEach(function (studente, i) {
     console.log(`${name} ${surname}`)
 });
 
-//perché nel ciclo for ho dovuto dare un valore alla variabile i (let studente = studenti[i]),
-//mentre nel forEach non serve? Perché avendolo indicato nel paramentro è già di suo il singolo
-//elemento dell'array?
-
 
 /* MILESTONE 2
 Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
@@ -100,18 +96,20 @@ poi commentate il ciclo for e usate il forEach */
 //creare oggetto studente vuoto => provare in maniera dinamica
 const nuovoStudente = {};
 
-
+///////////////da qui
 //chiedere tramite prompt nome
-let   propName = 'nome'
-const valueName = prompt('Inserisci il nome'); //string | Null
+// let   propName = 'nome'
+// const valueName = prompt('Inserisci il nome'); //string | Null
 
-//chiedere tramite prompt cognome
-let propSurname = 'cognome'
-const valueSurname = prompt('Inserisci il cognome');//string | Null
+// //chiedere tramite prompt cognome
+// let propSurname = 'cognome'
+// const valueSurname = prompt('Inserisci il cognome');//string | Null
 
-//chiedere tramite prompt età e trasformare stringa in numero
-let propEta = 'eta'
-const valueEta = parseInt(prompt('Inserisci la tua età'));
+// //chiedere tramite prompt età e trasformare stringa in numero
+// let propEta = 'eta'
+// const valueEta = parseInt(prompt('Inserisci la tua età'));
+
+///////////////a qui
 
 //creare le proprietà da inserire nell'oggetto studente
 nuovoStudente[propName] = valueName;
