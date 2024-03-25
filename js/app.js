@@ -17,29 +17,29 @@ const studenti = [
     {
         nome: 'Mario',
         cognome: 'Lanza',
-        eta: '34'
+        eta: 34,
     },
     {
         nome: 'Stefania',
         cognome: 'Satta',
-        eta: '23'
+        eta: 23,
     },
     {
         nome: 'Luciano',
         cognome: 'Bertolli',
-        eta: '56'
+        eta: 56,
     },
     {
         nome: 'Carlo',
         cognome: 'Scano',
-        eta: '21'
+        eta: 21,
     },
     {
         nome: 'Ilaria',
         cognome: 'Savoldi',
-        eta: '33'
+        eta: 33,
     },
-    
+
 
 ];
 
@@ -57,19 +57,20 @@ console.log(studenti);
 //     const name = studente.nome
 //      //--costante cognome
 //     const surname = studente.cognome  
-    
+
 //     //stampare nome e cognome
 //     console.log(`${name} ${surname}`)        
 
 // };
 
-studenti.forEach(function(studente,i){
+//commentare il ciclio for e provare con forEach
+studenti.forEach(function (studente, i) {
     //--costante nome
     const name = studente.nome
     //--costante cognome
-    const surname = studente.cognome     
-   //stampare nome e cognome
-    console.log(`${name} ${surname}`)  
+    const surname = studente.cognome
+    //stampare nome e cognome
+    console.log(`${name} ${surname}`)
 });
 
 //perché nel ciclo for ho dovuto dare un valore alla variabile i (let studente = studenti[i]),
@@ -85,31 +86,57 @@ prima ciclate con un ciclo for
 poi commentate il ciclo for e usate il forEach */
 
 
-//creare oggetto studente 
-const nuovoStudente = 
-             //chiedere tramite prompt nome
-            {nome: prompt('Inserisci il nome'), //string | Null
-             //chiedere tramite prompt cognome
-             cognome: prompt('Inserisci il cognome'), //string | Null
-             //chiedere tramite prompt età e trasformare stringa in numero
-             eta: parseInt(prompt('Inserisci la tua età')) //Number | NaN
-             };
+//creare oggetto studente => provare tramite prompt dentro l'oggetto
+// const nuovoStudente =
+// {   //chiedere tramite prompt nome
+//     nome: prompt('Inserisci il nome'), //string | Null
+//     //chiedere tramite prompt cognome
+//     cognome: prompt('Inserisci il cognome'), //string | Null
+//     //chiedere tramite prompt età e trasformare stringa in numero
+//     eta: parseInt(prompt('Inserisci la tua età')) //Number | NaN
+// };
+
+
+//creare oggetto studente vuoto => provare in maniera dinamica
+const nuovoStudente = {};
+
+
+//chiedere tramite prompt nome
+let   propName = 'nome'
+const valueName = prompt('Inserisci il nome'); //string | Null
+
+//chiedere tramite prompt cognome
+let propSurname = 'cognome'
+const valueSurname = prompt('Inserisci il cognome');//string | Null
+
+//chiedere tramite prompt età e trasformare stringa in numero
+let propEta = 'eta'
+const valueEta = parseInt(prompt('Inserisci la tua età'));
+
+//creare le proprietà da inserire nell'oggetto studente
+nuovoStudente[propName] = valueName;
+nuovoStudente[propSurname] = valueSurname;
+nuovoStudente[propEta] = valueEta;
+
 console.log(nuovoStudente)
 
 studenti.push(nuovoStudente);
 console.log(studenti);
 
+//per ogni oggetto studente dell'array ciclare e ottenere nome cognome ed età
 // for (let i = 0; i<studenti.length; i++){
 //     let studente = studenti[i];
 //     console.log(`${studente.nome} ${studente.cognome} ${studente.eta}`)  
 // };
 
-studenti.forEach(function(studente, i){
-    console.log(`${studente.nome} ${studente.cognome} ${studente.eta}`) 
+
+//sostituire il ciclo for con forEach
+studenti.forEach(function (studente, i) {
+    console.log(`${studente.nome} ${studente.cognome} ${studente.eta}`)
 });
 
 
-
+//solo il mio 
 
 
 
