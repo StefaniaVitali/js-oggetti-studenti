@@ -9,28 +9,48 @@
   <body>
     <header> 
       <h1 class="text-center bg-primary-subtle py-3">Js-Oggetti-Studenti</h1>
+      <a href="./tabella.html">Vai alla tabella</a>
     </header>
     <main>
-      <section id="page-form">
+      <section id="page-form" class="border-bottom border-4 pb-5">
         <div class="container">
           <div class="row d-flex justify-content-center" id="student-form">
             <!-- inizia il form -->
-            <form id="new-student-form" action="" method="post"> 
-              <div class="col-4 border rounded-3 py-2 mt-5">
+            <div class="col-4 border rounded-3 py-2 mt-5">
+                <form id="new-student-form" action="" method="post"> 
                 <h2 class="text-center bg-primary-subtle rounded-3">Inserisci nuovo studente</h2>
                 <label for="nome" class="form-label mt-1">Nome</label>
                 <input class="form-control" id="nome" type="text" placeholder="Marco">
                 <label for="cognome" class="form-label mt-1">Cognome</label>
                 <input class="form-control" id="cognome" type="text" value="" placeholder="Rossi">
-                <label for="età" class="form-label mt-1">Cognome</label>
+                <label for="età" class="form-label mt-1">Età</label>
                 <input class="form-control" id="età" type="text" value="" placeholder="35">
                 <div class="row d-flex justify-content-center">
                   <button type="submit" id="invio" class="btn btn-primary my-3 col-3">Invio</button>
                 </div>
-              </div>
+              </form>  
+            </div>
             <!-- finisce il form  -->
-            </form>  
           </div>
+        </div>
+      </section>
+      <section class="table-students mt-3">
+        <div class="container">
+          <table id="table-studenti" class="table table-striped">
+            <caption class="caption-top h3">     
+              Gli studenti
+            </caption>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Età</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-studenti" class="table-group-divider">
+            </tbody>
+    
+        </table>
         </div>
       </section>
     </main>
